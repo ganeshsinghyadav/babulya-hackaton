@@ -15,14 +15,17 @@ angular.module('babulya')
     $scope.awesomeThings = [{
       'title': 'Доставка медикаментів',
       'description': 'Для людей з обмеженими можливостями',
-      'logo': 'browsersync.png'
+      'logo': 'browsersync.png',
+      'icon': 'fa-truck'
     }, {
       'title': 'Необхідно провести додому?',
       'description': 'Затрималася в бібліотеці і страшно йти додому?',
-      'logo': 'browsersync.png'
+      'logo': 'browsersync.png',
+      'icon': 'fa-shield'
     }, {
       'title': 'Доставка продуктів харчування',
       'description': 'Закінчилася їжа, а йти влом? Замов доставку!',
-      'logo': 'browsersync.png'
+      'logo': 'browsersync.png',
+      'icon': 'fa-truck'
     }];
   });
