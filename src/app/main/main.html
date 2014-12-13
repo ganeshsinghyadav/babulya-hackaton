@@ -33,11 +33,11 @@
   <div class="container">
     <h2>Активні волонтери</h2>
     <div class="row">
-      <div class="col-sm-6 col-md-4" ng-repeat="item in volunteers">
+      <div class="col-sm-6 col-md-4" ng-repeat="item in volunteers | limitTo: 6">
         <div class="text-center">
           <img class="img-circle" ng-src="{{item.photo}}" alt="{{item.name}}">
           <h3>{{item.name}}</h3>
-          <p>{{item.description}}</p>
+          <p class="lead">{{item.description}}</p>
         </div>
       </div>
     </div>
