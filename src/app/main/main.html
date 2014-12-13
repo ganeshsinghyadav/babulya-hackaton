@@ -1,0 +1,47 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<section class="heading">
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Хто ми?!</h1>
+      <p class="lead">
+        Ми - громадська організація яка покликана організовувати вело общественность в Україні на допомогу дівчатам і похилим людям добратися в пізній час, до їхнього будинку.Також доставка лікарських припаратів і продуктів харчування людям з обмеженою діяльністю, боремся за чистоту в нашому місті, влаштовуємо різноманітні заходи. Звичайно ж за спасибі.
+      </p>
+      <p><a class="btn btn-lg btn-success" ng-href="#">Зробити добре!</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="awesomeThings">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4" ng-repeat="item in awesomeThings">
+        <div class="text-center">
+          <img ng-src="assets/images/{{item.logo}}" alt="{{item.title}}">
+          <div class="caption">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="volunteers">
+  <div class="container">
+    <h2>Активні волонтери</h2>
+    <div class="row">
+      <div class="col-sm-6 col-md-4" ng-repeat="item in volunteers">
+        <div class="text-center">
+          <img class="img-circle" ng-src="{{item.photo}}" alt="{{item.name}}">
+          <h3>{{item.name}}</h3>
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div ng-include="'components/footer/footer.html'"></div>
