@@ -71,6 +71,11 @@ angular.module('babulya', ['ngStorage', 'ngAnimate', 'ngCookies', 'ngTouch', 'ng
         templateUrl: 'app/area/index.html',
         controller: 'AreaCtrl'
       })
+      .state('newchallenge', {
+        url: '/volunteer/:id/newchallenge',
+        templateUrl: 'app/newchallenge/index.html',
+        controller: 'NewchallengeCtrl'
+      })
 
 
     ;
