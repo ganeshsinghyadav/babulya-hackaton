@@ -31,15 +31,15 @@ angular.module('babulya')
       }).success(function(user) {
         $scope.user = user;
 
-            if (!user.id) {
-                $scope.error = user.message;
-            } else {
-                $localStorage.user = user;
-                OrmStorage.storeObjects('challenge',user.challenges);
-                $state.go('home');
-                
-            }
-        });
+        if (!user.id) {
+          $scope.error = user.message;
+        } else {
+          $localStorage.user = user;
+          OrmStorage.storeObjects('challenge', user.challenges);
+          $state.go('home');
+
+        }
+      });
     };
 
     $http.get('http://velopatrol.in.ua/api/area/list').success(function(areas) {

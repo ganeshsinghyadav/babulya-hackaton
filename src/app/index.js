@@ -75,8 +75,7 @@ angular.module('babulya', ['ngStorage', 'ngAnimate', 'ngCookies', 'ngTouch', 'ng
         url: '/volunteer/:id/newchallenge',
         templateUrl: 'app/newchallenge/index.html',
         controller: 'NewchallengeCtrl'
-      })
-    ;
+      });
 
     $urlRouterProvider.otherwise('/');
   });

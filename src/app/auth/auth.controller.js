@@ -1,5 +1,4 @@
 'use strict';
 
 angular.module('babulya')
-  .controller('AuthCtrl', function() {
-  });
+  .controller('AuthCtrl', function() {});

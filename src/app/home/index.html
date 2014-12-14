@@ -1,17 +1,22 @@
-<div ng-controller="HomeCtrl" >
-    <div class="modal-header">
-        <h3 class="modal-title">Привіт {{username}}!</h3>
-        <a></a>
+<div ng-controller="HomeCtrl">
+  <div class="container">
+    <h2>Привіт, {{username}}!</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div style="margin: 40px auto;">
+          <a class="btn btn-lg btn-success" ng-click="newChallange()">Викликати Волонтера</a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Ваши останні замовлення</div>
+          <!-- List group -->
+          <ul class="list-group">
+            <li class="list-group-item animate-repeat" ng-repeat="challenge in challenges | limitTo: 5" ng-click="more({{challenge.id}})">{{challenge.address}} &mdash; {{challenge.date}}</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="home-body" >
-        <a class="btn btn-lg btn-success" ng-click="newChallange()"   >Викликати Волонтера</a>
-
-        <ul class="example-animate-container">
-            <li class="animate-repeat" ng-repeat="challenge in challenges"  ng-click="more({{challenge.id}})" >
-                {{challenge.address}}
-                {{challenge.date}}
-            </li>
-        </ul>
-
-    </div>
+  </div>
 </div>

@@ -1,15 +1,22 @@
-<div ng-controller="AreaCtrl" >
-    <div class="modal-header">
-        <h3 class="modal-title">Привіт {{username}}!</h3>
+<div ng-controller="AreaCtrl">
+  <div class="container">
+    <h2>Привіт, {{username}}!</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Обраний район: <strong>{{area.title}}</strong></h3>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Виберіть волонтера для доставки замовлення</div>
+          <!-- List group -->
+          <ul class="example-animate-container list-group">
+            <a href="#" class="list-group-item animate-repeat" ng-repeat="volunteer in volunteers" ng-click="chooseVolonter({{volunteer.id}})">
+              <img class="img-circle" ng-src="{{volunteer.photo}}" alt="{{volunteer.name}}" width="40" style="float:left; clear: both; margin-right: 15px;">
+              <h4 class="list-group-item-heading">{{volunteer.name}}</h4>
+              <p class="list-group-item-text">{{volunteer.description}}</p>
+            </a>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="home-body" >
-        
-        <div>{{area.title}}</div>
-        
-        <ul class="example-animate-container">
-            <li class="animate-repeat" ng-repeat="volunteer in volunteers"  ng-click="chooseVolonter({{volunteer.id}})" >
-                {{volunteer.name}}
-            </li>
-        </ul>
-    </div>
+  </div>
 </div>

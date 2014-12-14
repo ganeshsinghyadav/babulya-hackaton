@@ -1,12 +1,20 @@
-<div ng-controller="AreasCtrl" >
-    <div class="modal-header">
-        <h3 class="modal-title">Привіт {{username}}!</h3>
+<div ng-controller="AreasCtrl">
+  <div class="container">
+    <h2>Привіт, {{username}}!</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Виберіть район для доставки замовлення</div>
+          <!-- List group -->
+          <ul class="example-animate-container list-group">
+            <a href="#" class="list-group-item animate-repeat" ng-repeat="area in areas" ng-click="chooseVolonter({{area.id}})">
+              <h4 class="list-group-item-heading">{{area.title}}</h4>
+              <p class="list-group-item-text">...</p>
+            </a>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="home-body" >
-        <ul class="example-animate-container">
-            <li class="animate-repeat" ng-repeat="area in areas"  ng-click="chooseVolonter({{area.id}})" >
-                {{area.title}}
-            </li>
-        </ul>
-    </div>
+  </div>
 </div>
