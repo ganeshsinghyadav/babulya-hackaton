@@ -10,7 +10,7 @@ angular.module('babulya')
     $scope.volunteers = OrmStorage.getStoredObjects($scope.area.volunteers, 'volunteer');
 
     $scope.chooseVolonter = function(volunteerId) {
-        $state.go('newchallenge',{'id':volunteerId});
+        $state.go('newchallenge', {'id': volunteerId});
     };
 
-  });
+});
