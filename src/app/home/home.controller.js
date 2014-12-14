@@ -7,8 +7,23 @@ angular.module('babulya')
       .success(function(challanges) {
         console.log(challanges);
       });
+      
+    var ids = OrmStorage.getIds('challenge');
+    
+    
+    console.log(ids);   
+    
+    $scope.challenges  =  OrmStorage.getStoredObjects(ids,'challenge');
+
+    console.log($scope.challenges );   
+
+
 
     $scope.newChallange = function() {
+      $state.go('areas');
+    };
+    
+    $scope.more = function(id) {
       $state.go('areas');
     };
 
