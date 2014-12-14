@@ -1,6 +1,6 @@
 'use strict';
 angular.module('babulya')
-  .controller('NewchallengeCtrl', function($scope, $state, $http, $localStorage) {
+  .controller('NewchallengeCtrl', function($scope, $state, $http, $localStorage, $window) {
 
     $scope.username = $localStorage.user.name;
     $scope.volunteer = OrmStorage.getStoredObject($state.params.id, 'volunteer');
@@ -14,8 +14,8 @@ angular.module('babulya')
       dateTime: 12312,
     };
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
+    if ($window.navigator.geolocation) {
+      $window.navigator.geolocation.getCurrentPosition(function(position) {
         $scope.challenge.lat = position.coords.latitude;
         $scope.challenge.lng = position.coords.longitude;
       });

@@ -15,7 +15,7 @@ angular.module('babulya')
       $state.go('areas');
     };
 
-    $scope.more = function(id) {
+    $scope.more = function() {
       $state.go('areas');
     };
 

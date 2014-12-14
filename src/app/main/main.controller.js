@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('babulya')
-  .controller('MainCtrl', function($scope, $http, $localStorage, $state, $modal) {
+  .controller('MainCtrl', function($scope, $http, $localStorage, $state, $modal, $window) {
     var volunteerUrl = 'http://velopatrol.in.ua/api/volunteer/list';
 
     $http.get(volunteerUrl)
@@ -18,8 +18,8 @@ angular.module('babulya')
     };
 
     $scope.login = function() {
-      if (window.localStorage['pushtoken']) {
-        $scope.user.token = window.localStorage['pushtoken'];
+      if ($window.localStorage.pushtoken) {
+        $scope.user.token = $window.localStorage.pushtoken;
 
         $http({
           method: 'POST',
@@ -44,10 +44,9 @@ angular.module('babulya')
             $localStorage.user = user;
             OrmStorage.storeObjects('challenge', user.challenges);
             $state.go('home');
-
           }
         });
-      };
+      }
     };
 
     $http.get('http://velopatrol.in.ua/api/area/list').success(function(areas) {

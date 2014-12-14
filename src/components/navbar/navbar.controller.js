@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('babulya')
-  .controller('NavbarCtrl', function($scope, $modal, $log, $location, $anchorScroll) {
+  .controller('NavbarCtrl', function($scope, $modal, $log) {
     $scope.navbarCollapsed = true;
 
     $scope.open = function(size) {
@@ -48,31 +48,31 @@ angular.module('babulya')
           } else {
             $target = $elm;
           }
-          $("body").animate({
+          $('body').animate({
             scrollTop: $target.offset().top
-          }, "slow");
+          }, 'slow');
         });
       }
-    }
+    };
   })
-  .directive("scroll", function($window) {
-    return function(scope, element, attrs) {
-      angular.element($window).bind("scroll", function() {
+  .directive('scroll', function($window) {
+    return function(scope) {
+      angular.element($window).bind('scroll', function() {
         if ($('.navbar').hasClass('static')) {
-          $(".navbar").addClass("top-nav-collapse");
+          $('.navbar').addClass('top-nav-collapse');
           return;
-        };
+        }
 
-        if ($(".navbar").offset().top > 50) {
-          $(".navbar-fixed-top").addClass("top-nav-collapse");
+        if ($('.navbar').offset().top > 50) {
+          $('.navbar-fixed-top').addClass('top-nav-collapse');
         } else {
-          $(".navbar-fixed-top").removeClass("top-nav-collapse");
+          $('.navbar-fixed-top').removeClass('top-nav-collapse');
         }
 
         scope.$apply();
 
-        $(".navbar-collapse ul li a").click(function() {
-          $(".navbar-toggle:visible").click();
+        $('.navbar-collapse ul li a').click(function() {
+          $('.navbar-toggle:visible').click();
         });
       });
     };
