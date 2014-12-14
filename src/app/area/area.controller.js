@@ -5,14 +5,14 @@ angular.module('babulya')
 
     $scope.username = $localStorage.user.name;
     
-    var ids = OrmStorage.getIds('area');
-    $scope.areas  =  OrmStorage.getStoredObjects(ids,'area');
+    $scope.area  =  OrmStorage.getStoredObject($state.params.id,'area');
     
-console.log($scope);
+    $scope.volunteers  =  OrmStorage.getStoredObjects($scope.area.volunteers,'volunteer');
+    
     $scope.chooseVolonter = function(areaId) {
             console.log(areaId);
 
 
-    }
+    };
 
 });

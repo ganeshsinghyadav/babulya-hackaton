@@ -14,6 +14,6 @@ angular.module('babulya')
     $scope.newChallange = function(){
         
         $state.go('areas');
-    }
+    };
 
 });

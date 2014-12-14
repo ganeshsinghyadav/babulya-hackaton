@@ -12,6 +12,6 @@ angular.module('babulya')
     $scope.chooseVolonter = function(areaId) {
         $state.go('area',{'id':areaId});
     
-    }
+    };
 
 });

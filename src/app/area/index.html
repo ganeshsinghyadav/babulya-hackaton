@@ -3,9 +3,12 @@
         <h3 class="modal-title">Привіт {{username}}!</h3>
     </div>
     <div class="home-body" >
+        
+        <div>{{area.title}}</div>
+        
         <ul class="example-animate-container">
-            <li class="animate-repeat" ng-repeat="area in areas"  ng-click="chooseVolonter({{area.id}},{{area.volunteers}})" >
-                {{area.title}}
+            <li class="animate-repeat" ng-repeat="volunteer in volunteers"  ng-click="chooseVolonter({{volunteer.id}})" >
+                {{volunteer.name}}
             </li>
         </ul>
     </div>
