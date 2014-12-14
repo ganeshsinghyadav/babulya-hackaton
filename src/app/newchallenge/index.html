@@ -1,0 +1,19 @@
+<div ng-controller="NewchallengeCtrl" >
+    <div class="modal-header">
+        <h3 class="modal-title">Привіт {{username}}!</h3>
+    </div>
+    <div class="home-body" >
+        
+        <div>Викликати {{volunteer.name}}</div>
+       
+         <form role="form">
+          <div class="form-group">
+            <label class="sr-only" for="name">Імя</label>
+            <input type="text" class="form-control" id="name" name="name" ng-model="challenge.address" placeholder="Адреса">
+          </div>
+        </form>
+                <a class="btn btn-lg btn-success " ng-click="call()"   >Викликати</a>
+
+        
+    </div>
+</div>

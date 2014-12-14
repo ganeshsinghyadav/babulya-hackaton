@@ -70,7 +70,13 @@ angular.module('babulya', ['ngStorage', 'ngAnimate', 'ngCookies', 'ngTouch', 'ng
         url: '/area/:id/',
         templateUrl: 'app/area/index.html',
         controller: 'AreaCtrl'
-      });
+      })
+      .state('newchallenge', {
+        url: '/volunteer/:id/newchallenge',
+        templateUrl: 'app/newchallenge/index.html',
+        controller: 'NewchallengeCtrl'
+      })
+    ;
 
     $urlRouterProvider.otherwise('/');
   });
