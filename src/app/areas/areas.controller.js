@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('babulya')
-        .controller('AreaCtrl', function($scope, $state, $http, $localStorage) {
+        .controller('AreasCtrl', function($scope, $state, $http, $localStorage) {
 
     $scope.username = $localStorage.user.name;
     
