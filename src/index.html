@@ -41,6 +41,7 @@
       e.src='//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
+   
     </script>
 
     <!-- build:js scripts/vendor.js -->
@@ -55,12 +56,17 @@
     <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="../bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <!-- endbower -->
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    
     <!-- endbuild -->
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="app/index.js"></script>
+    <script src="app/area/area.controller.js"></script>
+    <script src="app/areas/area.controller.js"></script>
     <script src="app/auth/auth.controller.js"></script>
+    <script src="app/home/home.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="components/footer/footer.controller.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>

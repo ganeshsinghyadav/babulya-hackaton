@@ -1,0 +1,12 @@
+<div ng-controller="AreasCtrl" >
+    <div class="modal-header">
+        <h3 class="modal-title">Привіт {{username}}!</h3>
+    </div>
+    <div class="home-body" >
+        <ul class="example-animate-container">
+            <li class="animate-repeat" ng-repeat="area in areas"  ng-click="chooseVolonter({{area.id}},{{area.volunteers}})" >
+                {{area.title}}
+            </li>
+        </ul>
+    </div>
+</div>
