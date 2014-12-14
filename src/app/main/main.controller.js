@@ -52,16 +52,16 @@ angular.module('babulya')
       'title': 'Доставка медикаментів',
       'description': 'Для людей з обмеженими можливостями',
       'logo': 'browsersync.png',
-      'icon': 'fa-truck'
+      'icon': 'fa-plus-circle'
     }, {
       'title': 'Необхідно провести додому?',
       'description': 'Затрималася в бібліотеці і страшно йти додому?',
       'logo': 'browsersync.png',
-      'icon': 'fa-shield'
+      'icon': 'fa-female'
     }, {
       'title': 'Доставка продуктів харчування',
       'description': 'Закінчилася їжа, а йти влом? Замов доставку!',
       'logo': 'browsersync.png',
-      'icon': 'fa-truck'
+      'icon': 'fa-shopping-cart'
     }];
   });
