@@ -8,7 +8,7 @@ angular.module('babulya')
             .success(function(data) {
         $scope.volunteers = data;
     })
-            .error(function(data) {
+    .error(function(data) {
         console.error(data);
     });
 
@@ -32,8 +32,9 @@ angular.module('babulya')
                 $scope.error = user.message;
             } else {
                 $localStorage.user = user;
+                OrmStorage.storeObjects('challenge',user.challenges);
                 $state.go('home');
-                $close();
+                
             }
         });
     };
@@ -44,8 +45,6 @@ angular.module('babulya')
     $http.get('http://velopatrol.in.ua/api/volunteer/list').success(function(volunteers) {
         OrmStorage.storeObjects('volunteer',volunteers);
     });
-
-
 
     $scope.awesomeThings = [{
             'title': 'Доставка медикаментів',
