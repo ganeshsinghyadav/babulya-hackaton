@@ -70,10 +70,7 @@ angular.module('babulya', ['ngStorage', 'ngAnimate', 'ngCookies', 'ngTouch', 'ng
         url: '/area/:id/',
         templateUrl: 'app/area/index.html',
         controller: 'AreaCtrl'
-      })
-
-
-    ;
+      });
 
     $urlRouterProvider.otherwise('/');
   });
