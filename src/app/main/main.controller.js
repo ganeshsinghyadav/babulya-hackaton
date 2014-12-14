@@ -64,3 +64,4 @@ angular.module('babulya')
             'icon': 'fa-truck'
         }];
 });
+
