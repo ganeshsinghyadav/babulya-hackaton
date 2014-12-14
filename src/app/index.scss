@@ -16,18 +16,19 @@
     border-top-left-radius: 4px;
   }
 }
+.heading {
+  padding-top: 100px;
+}
 section {
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+  min-height: 490px;
   padding-top: 50px;
   padding-bottom: 60px;
   text-align: left;
-
   &:nth-of-type(odd) {
     background: #eee;
   }
-
   h2 {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -56,10 +57,37 @@ section {
     }
   }
 }
+.anchor__link {
+  &:hover {
+    cursor: pointer;
+  }
+}
 footer {
   border-top: 2px solid #e7e7e7;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media(min-width:767px) {
+  .navbar {
+    padding: 20px 0;
+    border-bottom: 0;
+    /*letter-spacing: 1px;*/
+
+    background: 0 0;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
+  .top-nav-collapse {
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  .top-nav-collapse img.logo {
+    height: 20px;
+  }
+  .navbar-custom.top-nav-collapse {
+    /*border-bottom: 1px solid rgba(255,255,255,.3);*/
+  }
 }
 // injector
 // endinjector

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavbarCtrl" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" ng-click="navbarCollapsed = !navbarCollapsed">
@@ -14,7 +14,7 @@
 
     <div class="collapse navbar-collapse" collapse="navbarCollapsed">
       <ul class="nav navbar-nav">
-        <li ng-repeat="item in items"><a href="{{item.id}}">{{item.title}}</a></li>
+        <li ng-repeat="item in items"><a href="{{item.id}}" class="anchor__link" scroll-on-click>{{item.title}}</a></li>
       </ul>
     </div>
   </div>
