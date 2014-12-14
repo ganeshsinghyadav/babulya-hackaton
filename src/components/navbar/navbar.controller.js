@@ -2,6 +2,7 @@
 
 angular.module('babulya')
   .controller('NavbarCtrl', function($scope, $modal, $log) {
+    $scope.navbarCollapsed = true;
 
     $scope.open = function(size) {
       var modalInstance = $modal.open({
@@ -18,17 +19,20 @@ angular.module('babulya')
     };
 
     $scope.items = [{
-      'id': '#home',
+      'id': '#main',
       'title': 'Головна'
     },{
       'id': '#aboutUs',
-      'title': 'О нас'
+      'title': 'Про нас'
     },{
       'id': '#awesomeThings',
       'title': 'Переваги'
     },{
       'id': '#volunteers',
       'title': 'Волонтери'
+    },{
+      'id': '#footer',
+      'title': 'Соціальні мережі'
     },];
 
   });
