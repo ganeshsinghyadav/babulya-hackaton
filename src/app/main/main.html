@@ -1,13 +1,10 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<section class="heading">
+<section id="home" class="heading">
   <div class="container">
-    <div class="jumbotron text-center">
-      <h1>Хто ми?!</h1>
-      <p class="lead">
-        Ми - громадська організація яка покликана організовувати вело общественность в Україні на допомогу дівчатам і похилим людям добратися в пізній час, до їхнього будинку.Також доставка лікарських припаратів і продуктів харчування людям з обмеженою діяльністю, боремся за чистоту в нашому місті, влаштовуємо різноманітні заходи. Звичайно ж за спасибі.
-      </p>
-      <div class="col-sm-6 col-sm-offset-3">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <img src="assets/images/logo_big.png" width="300" style="margin: 15px;">
         <div ng-if="error" class="alert alert-warning">{{error}}</div>
         <form role="form">
           <div class="form-group">
@@ -29,7 +26,20 @@
   </div>
 </section>
 
-<section class="awesomeThings">
+<section id="aboutUs" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <h1>Хто ми?!</h1>
+        <p class="lead">
+          Ми - громадська організація яка покликана організовувати вело общественность в Україні на допомогу дівчатам і похилим людям добратися в пізній час, до їхнього будинку.Також доставка лікарських припаратів і продуктів харчування людям з обмеженою діяльністю, боремся за чистоту в нашому місті, влаштовуємо різноманітні заходи. Звичайно ж за спасибі.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="awesomeThings" class="awesomeThings">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-4" ng-repeat="item in awesomeThings">
@@ -45,7 +55,7 @@
   </div>
 </section>
 
-<section class="volunteers">
+<section id="volunteers" class="volunteers">
   <div class="container">
     <h2>Активні волонтери</h2>
     <div class="row">
