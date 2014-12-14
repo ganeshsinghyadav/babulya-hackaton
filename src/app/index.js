@@ -76,8 +76,6 @@ angular.module('babulya', ['ngStorage', 'ngAnimate', 'ngCookies', 'ngTouch', 'ng
         templateUrl: 'app/newchallenge/index.html',
         controller: 'NewchallengeCtrl'
       })
-
-
     ;
 
     $urlRouterProvider.otherwise('/');

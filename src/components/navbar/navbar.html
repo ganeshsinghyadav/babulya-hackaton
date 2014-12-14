@@ -8,9 +8,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li class="hidden-lg hidden-sm">
-          <a ng-href="#">Главная</a>
-        </li>
+        <li ng-repeat="item in items"><a href="{{item.id}}">{{item.title}}</a></li>
       </ul>
 
     </div>
