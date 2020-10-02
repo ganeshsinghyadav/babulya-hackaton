@@ -12,6 +12,7 @@ describe('The main view', function () {
     expect(page.h1El.getText()).toBe('\'Allo, \'Allo!');
     expect(page.imgEl.getAttribute('src')).toMatch(/assets\/images\/yeoman.png$/);
     expect(page.imgEl.getAttribute('alt')).toBe('I\'m Yeoman');
+    expect(browser.currentUrl()).toBe('http://localhost:3000/index.html');
   });
 
   it('list more than 5 awesome things', function () {
